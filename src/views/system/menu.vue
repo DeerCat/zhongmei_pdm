@@ -113,20 +113,20 @@
                 }
               ]
             },
-            // {
-            //   label: "菜单图标",
-            //   prop: "source",
-            //   type: "icon",
-            //   slot: true,
-            //   iconList: iconList,
-            //   rules: [
-            //     {
-            //       required: true,
-            //       message: "请输入菜单图标",
-            //       trigger: "click"
-            //     }
-            //   ]
-            // },
+            {
+              label: "菜单图标",
+              prop: "source",
+              type: "icon",
+              slot: true,
+              iconList: iconList,
+              rules: [
+                {
+                  required: true,
+                  message: "请输入菜单图标",
+                  trigger: "click"
+                }
+              ]
+            },
             {
               label: "菜单编号",
               prop: "code",

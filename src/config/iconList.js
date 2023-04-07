@@ -114,5 +114,11 @@ export default [
       "iconfont icon-iframe",
       "iconfont icon-huanyingye",
     ]
+  },
+  {
+    label:"elementUI 图标",
+    list:[
+      "el-icon-bell"
+    ]
   }
 ]

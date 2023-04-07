@@ -30,7 +30,7 @@ export default {
   },
   //配置菜单的属性
   menu: {
-    showIcon:false,
+    showIcon:true,
     iconDefault: 'iconfont icon-caidan',
     props: {
       label: 'name',

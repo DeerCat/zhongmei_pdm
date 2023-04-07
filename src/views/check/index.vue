@@ -7,6 +7,9 @@
     :data="data" 
     :page="page"
     :before-open="beforeOpen">
+      <template slot-scope="{ row }" slot="check_type">
+        <el-tag>{{ row.$check_type }}</el-tag>
+      </template>
       <template slot-scope="{ row }" slot="check_status">
         <el-tag>{{ row.$check_status }}</el-tag>
       </template>
@@ -42,9 +45,10 @@ export default {
         editBtnText:"审核",
         editTitle:'审核',
         delBtn: false,
-        header:true,
+        header:false,
         emptyBtnText:'重置',
         emptyBtnIcon:'el-icon-refresh',
+        searchSpan:4,
         searchMenuSpan:4,
         searchMenuPosition:'right',
         span: 24,
@@ -66,6 +70,14 @@ export default {
             prop: "check_type",
             editDisplay:false,
             search: true,
+            searchOrder:1,
+            type: "select",
+            dicUrl:"/api/blade-system/dict/dictionary?code=application_type",
+            props: {
+              label: "dictValue",
+              value: "dictKey",
+            },
+            slot: true,
           },
           {
             label: "影响产品数",
@@ -76,18 +88,18 @@ export default {
             label: "任务状态",
             prop: "check_status",
             type: "select",
-            dicUrl:"/api/blade-system/dict/dictionary?code=check",
+            dicUrl:"/api/blade-system/dict/dictionary?code=check_status",
             props: {
               label: "dictValue",
               value: "dictKey",
             },
-             slot: true,
-            
+            slot: true,
             search: true,
+            searchOrder:2,
             rules: [
               {
                 required: true,
-                message: "请输入通知类型",
+                message: "请输入任务状态",
                 trigger: "blur",
               },
             ],
@@ -108,7 +120,7 @@ export default {
         {
           pruduct_name: "产品名称1",
           check_func: "审核事项1",
-          check_type: "申请类型1",
+          check_type: 1,
           emit_count: "123",
           check_status: 1,
           check_date: "时间1",

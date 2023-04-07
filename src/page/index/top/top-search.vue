@@ -7,7 +7,7 @@
                    @select="handleSelect">
 
     <template slot-scope="{ item }">
-      <!-- <i :class="[item[iconKey],'icon']"></i> -->
+      <i :class="[item[iconKey],'icon']"></i>
       <div class="name">{{ item[labelKey] }}</div>
       <div class="addr">{{ item[pathKey] }}</div>
     </template>

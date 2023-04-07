@@ -27,5 +27,17 @@ $border : '1px solid #e8e8e8';
 .avue--detail .el-col{
   margin-bottom: 0;
 }
-
+.el-scrollbar__wrap {
+    overflow-x: scroll !important;
+}
+.el-card{
+  box-sizing: border-box;
+}
+// .el-card__body{
+//   box-sizing: border-box !important;
+//   padding-bottom:0 !important;
+// }
+// .avue-crud{
+//   margin-bottom:20px;
+// }
 </style>

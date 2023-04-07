@@ -1,11 +1,13 @@
 .theme-white {
     .el-menu--popup{
+        background-color:#409EFF;
         .el-menu-item{
             background-color: #fff;
             i,span{
                 color:#666;
             }
             &:hover{
+                background-color: #a7d2fd;
                 i,span{
                     color:#333;
                 }
@@ -74,7 +76,7 @@
           color:#666
       }
       &:hover{
-          background: transparent;
+          background: #a7d2fd;
           i,span{
              color:#333;
           }

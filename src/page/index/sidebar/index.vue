@@ -46,6 +46,9 @@ export default {
   methods: {}
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
+  .avue-sidebar .el-scrollbar__wrap{
+    overflow-x:hidden !important;
+  }
 </style>
 
